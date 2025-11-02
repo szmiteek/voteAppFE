@@ -1,8 +1,11 @@
 # VoteApp
 
-# Frontend Application
+## Frontend Application
 
-This is the frontend part of the application built with Angular.
+This is the frontend part of the VoteApp application built with Angular.  
+The backend can be found here: [VoteApp Backend](https://github.com/szmiteek/voteAppBE)
+
+---
 
 ## Requirements
 
@@ -12,17 +15,38 @@ This is the frontend part of the application built with Angular.
 
 > Make sure Node.js and npm are installed. You can check the versions with:
 
-> node -v
-> npm -v
-
+```bash
+node -v
+npm -v
+```
 
 ---
 
-## Installation
+## Installation & Running the Application
 
-After cloning the repository, install all dependencies and run application:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/szmiteek/voteAppFE.git
+cd voteAppFE
+```
+
+2. Install all dependencies:
 
 ```bash
 npm install
-ng serve
-Once the server is running, open your browser and navigate to `http://localhost:4200/`
+```
+
+3. Start the application:
+
+```bash
+npm start
+```
+
+4. Open your browser and navigate to:
+
+```
+http://localhost:4200/
+```
+
+---
