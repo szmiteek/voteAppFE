@@ -10,7 +10,6 @@ The backend can be found here: [VoteApp Backend](https://github.com/szmiteek/vot
 ## Requirements
 
 - Node.js version 22.20.0  
-- Angular CLI version 20  
 - npm (for package management)
 
 > Make sure Node.js and npm are installed. You can check the versions with:
