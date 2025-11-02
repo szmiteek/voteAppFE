@@ -1,0 +1,50 @@
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="col-md-5">
+            <h4>🧍‍♂️ Electors</h4>
+            @if((electorsList$ | async); as electorsList){
+            @if(electorsList.length > 0){
+            @for (elector of electorsList; track $index) {
+
+            <div (click)="selectElector(elector.id)" class="vote-card mb-3"
+                [class.selected]="selectedElector === elector.id" style="cursor: pointer">
+                {{ elector.firstName }} {{ elector.lastName }}
+            </div>
+            }
+            }@else {
+            <h3>no electors</h3>
+            }
+            }
+        </div>
+
+        <div class="col-md-5 offset-md-2">
+            <h4>🗳️ Candidates</h4>
+            @if((candidatesList$ | async); as candidatesList){
+            @if(candidatesList.length > 0){
+            @for (candidate of candidatesList;track $index) {
+            <div class="candidate-row">
+                <div (click)="selectCandidate(candidate.id)" class="vote-card "
+                    [class.selected]="selectedCandidate === candidate.id" style="cursor: pointer">
+                    {{ candidate.firstName }} {{ candidate.lastName }}
+                </div>
+
+                <div class="counter-card">
+                    Votes count: {{candidate.votesCount}}
+                </div>
+            </div>
+            }
+            }@else {
+            <h3>no candidates</h3>
+            }
+            }
+        </div>
+    </div>
+
+
+    <div class="text-center mt-4">
+        <button (click)="vote()" class="btn btn-success btn-lg">
+            Confirm
+        </button>
+    </div>
+</div>

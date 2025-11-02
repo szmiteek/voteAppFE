@@ -1,0 +1,44 @@
+.candidate-row {
+    display: flex;
+    align-items: stretch;
+    /* wyrównanie wysokości kafelków */
+    gap: 10px;
+    /* odstęp między kafelkami */
+    margin-bottom: 15px;
+}
+
+.vote-card,
+.counter-card {
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    flex: 1;
+    /* oba kafelki zajmują równą szerokość */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.vote-card {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.vote-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.vote-card.selected {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+}
+
+.counter-card {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}

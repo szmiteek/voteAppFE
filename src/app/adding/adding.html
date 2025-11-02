@@ -1,0 +1,36 @@
+<div class="form-container">
+    <h2>Add candidate/elector</h2>
+
+    <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <span>Type</span>
+            <label><input type="radio" formControlName="type" [value]=personType.CANDIDATES> Candidate</label>
+            <label><input type="radio" formControlName="type" [value]=personType.ELECTORS> Elector</label>
+            <div *ngIf="isInvalid('type')" class="text-danger small mt-1">
+                Select one value
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" formControlName="firstName" placeholder="First name">
+            <div *ngIf="isInvalid('firstName')" class="text-danger small mt-1">
+                Type at least two characters
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" formControlName="lastName" placeholder="Last name">
+            <div *ngIf="isInvalid('lastName')" class="text-danger small mt-1">
+                Type at least two characters
+            </div>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Create</button>
+
+    </form>
+</div>
